@@ -198,7 +198,7 @@ public:
         if constexpr (REVERSED)
             val = __bit_reverse(__bit_reverse(__bit_reverse(val) - __bit_reverse(other.val)));
         else
-            val += other.val;
+            val -= other.val;
         return *this;
     }
     inline unorm constexpr operator-(const unorm& other) const
